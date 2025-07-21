@@ -1,0 +1,10 @@
+
+Statistics over 100000001 steps [ 0.0000 through 200000.0000 ps ], 4 data sets
+All statistics are over 20001 points (frames)
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Coul-SR:Protein-UNL        -207.807         14    46.6485   -87.3971  (kJ/mol)
+LJ-SR:Protein-UNL          -110.762        5.3    20.4212     20.712  (kJ/mol)
+Coul-14:Protein-UNL               0          0          0          0  (kJ/mol)
+LJ-14:Protein-UNL                 0          0          0          0  (kJ/mol)

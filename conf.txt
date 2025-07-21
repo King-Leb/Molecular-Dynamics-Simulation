@@ -1,0 +1,14 @@
+receptor = purineNP.pdbqt
+out = out.pdbqt
+
+center_x = 4.201
+center_y = -2.579
+center_z = 1.564
+
+size_x = 126
+size_y = 114
+size_z = 126
+
+num_modes = 20         # Increase from 10 to 20 for more binding poses
+energy_range = 8       # Increase from 4 to 8 to capture broader scoring range
+exhaustiveness = 32    # Add this to increase search thoroughness (default is 8)

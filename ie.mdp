@@ -1,0 +1,48 @@
+; Interaction Energy Calculation (200 ns rerun)
+
+integrator              = md            ; No dynamics, only energy calculation
+nsteps                  = 100000000     ; 200 ns = 100 million steps at 2 fs
+dt                      = 0.002         ; Time step (2 fs)
+
+; Output control
+nstxout                 = 0
+nstvout                 = 0
+nstfout                 = 0
+nstlog                  = 10000
+nstenergy               = 1000
+nstxout-compressed      = 0
+
+; Energy groups for interaction energy (adjust as needed)
+energygrps              = Protein UNL
+
+; Neighbor searching
+cutoff-scheme           = Verlet
+nstlist                 = 20
+rlist                   = 1.2
+
+; Electrostatics
+coulombtype             = PME
+rcoulomb                = 1.2
+pme_order               = 4
+fourierspacing          = 0.16
+
+; Van der Waals
+vdwtype                 = cutoff
+vdw-modifier            = force-switch
+rvdw-switch             = 1.0
+rvdw                    = 1.2
+
+; Constraints
+constraints             = h-bonds
+constraint_algorithm    = lincs
+lincs_order             = 4
+lincs_iter              = 1
+
+; No temperature/pressure coupling
+tcoupl                  = no
+pcoupl                  = no
+
+; Other settings
+pbc                     = xyz
+DispCorr                = no
+gen_vel                 = no
